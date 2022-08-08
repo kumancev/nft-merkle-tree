@@ -6,6 +6,8 @@
   },
   "dependencies": {
     "@nomiclabs/hardhat-etherscan": "^3.1.0",
-    "dotenv": "^16.0.1"
+    "dotenv": "^16.0.1",
+    "keccak256": "^1.0.6",
+    "merkletreejs": "^0.2.32"
   }
 }

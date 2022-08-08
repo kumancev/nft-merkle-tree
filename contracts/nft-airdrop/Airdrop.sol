@@ -2,7 +2,7 @@
 pragma solidity ^0.8.4;
 
 import "@openzeppelin/contracts/utils/cryptography/MerkleProof.sol";
-import "./IERC721";
+import "./IERC721.sol";
 
 contract Airdrop {
     address public immutable token;
