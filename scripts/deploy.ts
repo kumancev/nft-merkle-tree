@@ -1,4 +1,4 @@
-import { ethers } from "hardhat";
+import { ethers, run } from "hardhat";
 import { StanNFT__factory, Stan__factory } from "../typechain-types";
 
 async function main() {
@@ -21,6 +21,16 @@ async function main() {
     signer.address,
     ''
   )
+
+  await run('verify:verify', {
+    address: stanToken.address,
+    contract: 'contracts/StanToken.sol:StanToken'
+  })
+
+  await run('verify:verify', {
+    address: stanNFT.address,
+    contract: 'contracts/StanNFT.sol:StanNFT'
+  })
 
 }
 
