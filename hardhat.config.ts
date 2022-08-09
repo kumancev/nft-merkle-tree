@@ -11,6 +11,7 @@ const config: HardhatUserConfig = {
     hardhat: {
     },
     rinkeby: {
+      // create .env file with your private keys
       url: process.env.INFURA,
       accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
       gasPrice: 1000
