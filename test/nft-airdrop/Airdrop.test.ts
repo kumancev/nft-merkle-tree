@@ -41,6 +41,8 @@ describe('Airdrop', () => {
 
         expect(await airdrop.claimed(signer.address)).to.eq(true)
 
+        expect(await airdrop.canClaim(signer.address, proof)).to.eq(false)
+
         expect(await token.ownerOf(0)).to.eq(signer.address)
 
         await expect(airdrop.claim(proof)).to.be.revertedWith(
