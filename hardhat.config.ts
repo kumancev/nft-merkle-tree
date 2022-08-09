@@ -10,7 +10,7 @@ const config: HardhatUserConfig = {
   networks: {
     hardhat: {
     },
-    goerli: {
+    rinkeby: {
       url: process.env.INFURA,
       accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
       gasPrice: 1000
