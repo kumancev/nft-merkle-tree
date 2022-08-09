@@ -10,15 +10,13 @@ const config: HardhatUserConfig = {
   networks: {
     hardhat: {
     },
-    rinkeby: {
-      // create .env file with your private keys
-      url: process.env.INFURA,
+    matic: {
+      url: "https://rpc-mumbai.maticvigil.com",
       accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
-      gasPrice: 1000
     }
   },
   etherscan: {
-    apiKey: process.env.ETHERSCAN_API_KEY
+    apiKey: process.env.POLYGONSCAN_API_KEY
   }
 };
 
